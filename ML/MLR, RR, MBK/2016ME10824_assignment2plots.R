@@ -1,0 +1,7 @@
+data <- as.data.frame(read.csv( "~/Desktop/Course/ML/Assignment2/hbk_copy.csv", sep = ","))
+fit <- lm(data$y ~ data$x1 + data$x2 + data$x3)
+summary(fit)
+library(MASS)
+fit1 <- rlm(data$y ~ data$x1 + data$x2 + data$x3)
+summary(fit1)
+plot(fit1)
